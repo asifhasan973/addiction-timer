@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Addiction Timer</title>
+    <!-- Poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <!-- styles  -->
+    <style>
+        body {
+            /* background-color: black; */
+            background-image: linear-gradient(to bottom, #121D20, #0D3E61);
+            background-repeat: no-repeat;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .time {
+            font-weight: 700;
+            text-align: center;
+            font-size: 5rem;
+            margin: 0px;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .timer {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .my-name {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .my-name a {
+            text-decoration: none;
+            color: #369cfc;
+        }
+        
+        .my-name:hover {
+            transform: scale(1.1);
+            transition: 0.1s;
+        }
+        
+        p {
+            font-size: 13px;
+            text-align: center;
+        }
+        
+        footer {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="timer">
+        <p class="time" id="demo"></p>
+        <p class="time" id="demo2"></p>
+
+    </div>
+    <footer>
+        <p>Copyright © 2021. All right reserved and developed by <span class="my-name">
+            <a href="https://www.facebook.com/profile.php?id=100067762616115">ASIF HASAN</a>
+        </span></p>
+    </footer>
+
+
+    <script class="">
+        // Set the date we're counting down to
+        var countDownDate = new Date("Aug 6, 2021 18:30:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = now - countDownDate;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h ";
+            document.getElementById("demo2").innerHTML = minutes + "m " + seconds + "s ";
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
