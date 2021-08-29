@@ -13,87 +13,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap" rel="stylesheet">
+    <!-- bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- styles  -->
-    <style>
-        html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            /* background-color: black; */
-            background-image: linear-gradient(to bottom, #121D20, #0D3E61);
-            background-repeat: no-repeat;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .logo {
-            color: #35dc21;
-            font-family: 'Cinzel Decorative', cursive;
-            text-align: center;
-            font-size: 1rem;
-        }
-        
-        .time {
-            font-weight: 700;
-            font-size: 5rem;
-            margin: 0px;
-        }
-        
-        .time2 {
-            font-weight: 700;
-            font-size: 3rem;
-            margin: 0px;
-        }
-        
-        .timer {
-            width: 100%;
-            position: absolute;
-            top: 35%;
-            /* height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center; */
-        }
-        
-        .timer-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .my-name {
-            display: inline-block;
-            font-weight: 700;
-            font-size: 16px;
-        }
-        
-        .my-name a {
-            text-decoration: none;
-            color: #369cfc;
-        }
-        
-        .my-name:hover {
-            transform: scale(1.1);
-            transition: 0.1s;
-        }
-        
-        p {
-            font-size: 13px;
-            text-align: center;
-        }
-        
-        footer {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Awesome  -->
+    <script src="https://kit.fontawesome.com/0893c69b74.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -107,49 +33,31 @@
 
     <div class="timer">
         <div class="timer-div">
-            <p class="time" id="demo"></p>
-            <p class="time2" id="demo2"></p>
+            <p class="time p-tag" id="demo"></p>
+            <p class="time2 p-tag" id="demo2"></p>
+        </div>
+        <div class="repeat">
+            <i id="repeat-btn" class="fas fa-redo"></i>
+        </div>
+        <div class="text-center pt-5">
+            <a href="./history.html">
+                <button class="btn btn-success py-2 px-3">History</button>
+            </a>
         </div>
 
     </div>
 
+
+
+
     <footer>
-        <p>Copyright © 2021. All right reserved and developed by <span class="my-name">
+        <p class="p-tag">Copyright © 2021. All right reserved and developed by <span class="my-name">
             <a href="https://www.facebook.com/profile.php?id=100067762616115">ASIF HASAN</a>
         </span></p>
     </footer>
 
 
-    <script class="">
-        // Set the date we're counting down to
-        var countDownDate = new Date("Aug 23, 2021 13:10:25").getTime();
-
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-
-            // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = now - countDownDate;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Output the result in an element with id="demo"
-            document.getElementById("demo").innerHTML = days + " Days ";
-            document.getElementById("demo2").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
-            // If the count down is over, write some text 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
-
+    <script src="./Js/script.js"></script>
 </body>
 
 </html>
