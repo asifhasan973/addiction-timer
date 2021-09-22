@@ -25,6 +25,7 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="demo"
+    document.getElementById("at-spinner").style.display= "none";
     document.getElementById("demo").innerHTML = days + " Days ";
     document.getElementById("demo2").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
 

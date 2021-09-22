@@ -31,7 +31,9 @@
     </header>
 
 
-    <div class="timer">
+    <div style="height: 50px;" class="d-lg-none d-block">
+    </div>
+    <div class="timer mt-5">
         <div class="timer-div">
             <p class="time p-tag" id="demo"></p>
             <p class="time2 p-tag" id="demo2"></p>
@@ -39,16 +41,24 @@
         <div class="repeat">
             <i id="repeat-btn" class="fas fa-redo"></i>
         </div>
-        <div class="text-center pt-5">
-            <a href="./history.html">
-                <button class="btn btn-success py-2 px-3">History</button>
-            </a>
-        </div>
+        
+        
+        
 
+    </div>
+    <div class="text-center at-history-btn">
+        <a href="./history.html">
+            <button class="btn btn-success py-2 px-3">History</button>
+        </a>
     </div>
 
 
-
+    <!-- Spinner  -->
+    <div id="at-spinner">
+        <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
 
     <footer>
         <p class="p-tag">Copyright © 2021. All right reserved and developed by <span class="my-name">

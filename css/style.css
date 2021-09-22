@@ -34,13 +34,13 @@ body {
 }
 
 .timer {
-    width: 100%;
+    /* width: 100%;
     position: absolute;
-    top: 30%;
-    /* height: 400px;
+    top: 30%; */
+    height: 400px;
     display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 
 .timer-div {
@@ -92,4 +92,23 @@ footer {
     color: red;
     margin-top: 1.2em;
     font-size: 40px;
+}
+
+.at-history-btn{
+    /* display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+ */
+
+
+}
+#at-spinner{
+    
+    display: block;
+    position: relative;
+    top: -240px;
+    text-align: center;
+
+
 }
